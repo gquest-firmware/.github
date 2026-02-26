@@ -13,3 +13,13 @@ graph TD
     D --> H
     P --> D
 ```
+
+```mermaid
+graph TD
+T(Continuous time filter)--gen_coefficents.py-->C(coefficients)
+C--csim-->CR(C simulation results)
+C--pysim-->PR(Python simulation results)
+CR--verify-->V[verification]
+PR--verify-->V
+V--synthesis-->R(Results)
+```
